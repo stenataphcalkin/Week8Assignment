@@ -1,7 +1,12 @@
 Initial readme set up
 
+### Thoughts -
+
+Rendering content from the API that can be structured, or if there is any code that can be slipped into the API like Markdown to edit. One to review after assignment.
+
 Attribution:
 <a href="https://www.flaticon.com/free-icons/paintball" title="paintball icons">Paintball icons created by Smashicons - Flaticon</a>
+Photo by <a href="https://unsplash.com/@reallygoodjames?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">James Fitzgerald</a> on <a href="https://unsplash.com/photos/man-in-green-and-black-camouflage-jacket-holding-black-rifle-V93zr0pCou0?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
 
 # Reflection
 
@@ -18,13 +23,14 @@ Attribution:
 
 ### Base Requirements
 
-- 🎯 Display all posts on the page, with an option to sort them in ascending or descending order.
+- ✅ Display all posts on the page, with an option to sort them in ascending or descending order.
 - ✅ Create a SQL schema for a posts table and a comments table, with the comments being connected to the posts table with a foreign key.
-  - Please submit your database schema, as is mentioned in the submission instructions.
-- 🎯 Create a delete button on posts that allows users to delete the post from the database.
-- 🎯 Create a form which saves comments to a dedicated comments table, with the comments being connected to the posts table with a foreign key.
-- 🎯 Allow users to comment on individual posts in their dynamic routes. Comments should be associated with posts, and have a dynamic route (e.g. `/posts/:postid`).
-- 🎯 Add a `redirect` when a user creates a post to redirect them to the posts page.
+  - ✅ Please submit your database schema, as is mentioned in the submission instructions.
+    ✅((Render the comments into the page))
+- ✅ Create a delete button on posts that allows users to delete the post from the database.
+- ✅ Create a form which saves comments to a dedicated comments table, with the comments being connected to the posts table with a foreign key.
+- ✅ Allow users to comment on individual posts in their dynamic routes. Comments should be associated with posts, and have a dynamic route (e.g. `/posts/:postid`).
+- ✅ Add a `redirect` when a user creates a post to redirect them to the posts page.
 
 ### Stretch Requirements
 
