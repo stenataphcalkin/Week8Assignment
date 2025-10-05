@@ -34,7 +34,7 @@ export default async function PostsPage({ searchParams }) {
         <div className="posts-list">
           {paintballposts.map((post) => (
             <div className="blog-title-container" key={post.id}>
-              <Link className="blog-title" href={`/paintballposts/${post.id}`}>
+              <Link className="blog-title" href={`/posts/${post.id}`}>
                 {post.title}{" "}
               </Link>
             </div>

@@ -1,15 +1,15 @@
 import { db } from "@/utils/dbConnection";
+import Link from "next/link";
 import Image from "next/image";
 
-export default async function paintballpostsIdPage({ params }) {
-  const paintballpostsId = params.paintballpostsId;
+export default async function PaintballPostsIdPage({ params }) {
+  const postId = params.postId;
 
-  const query = await db.query(
-    `SELECT id, title, content, category FROM paintballposts WHERE id = $1`,
-    [paintballpostsId]
+  const postsQuery = await db.query(
+    `SELECT title, content FROM paintballposts WHERE id = $1`,
+    [postId]
   );
-
-  const paintballposts = query.rows[0];
+  const paintballposts = postsQuery.rows[0];
 
   if (!paintballposts) {
     return <div>Post not found.</div>;
