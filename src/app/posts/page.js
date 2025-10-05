@@ -19,16 +19,28 @@ export default async function PostsPage({ searchParams }) {
   const currentPath = "/posts";
 
   return (
-    <div>
-      <h1>Posts</h1>
-      <ul>
-        {paintballposts.map((post) => (
-          <li key={post.id}>
-            <h2>{post.title}</h2>
-            <br />
-          </li>
-        ))}
-      </ul>
-    </div>
+    <>
+      <div>
+        <h1>Posts</h1>
+        <div className="sort">
+          <Link className="alph" href={`${currentPath}?sort=asc`}>
+            Sort alphabetically{" "}
+          </Link>
+          <Link className="rev-alph" href={`${currentPath}?sort=desc`}>
+            Sort by reverse alphabetically
+          </Link>
+        </div>
+
+        <div className="posts-list">
+          {paintballposts.map((post) => (
+            <div className="blog-title-container" key={post.id}>
+              <Link className="blog-title" href={`/paintballposts/${post.id}`}>
+                {post.title}{" "}
+              </Link>
+            </div>
+          ))}
+        </div>
+      </div>
+    </>
   );
 }
